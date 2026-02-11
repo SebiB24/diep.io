@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drq33t0lj1oci"
-path="res://.godot/imported/diep-tank.png-c4bb33c865152ce1cc96f96b1f39d21d.ctex"
+uid="uid://cpphy3sfyvfi6"
+path="res://.godot/imported/diep-tank3.png-e72738356b3ef400f0b12d9dd982d73a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/diep-tank.png"
-dest_files=["res://.godot/imported/diep-tank.png-c4bb33c865152ce1cc96f96b1f39d21d.ctex"]
+source_file="res://resources/diep-tank3.png"
+dest_files=["res://.godot/imported/diep-tank3.png-e72738356b3ef400f0b12d9dd982d73a.ctex"]
 
 [params]
 

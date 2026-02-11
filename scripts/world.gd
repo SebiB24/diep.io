@@ -11,9 +11,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func _on_tank_shoot(bullet_pos):
+func _on_tank_shoot(bullet_pos, bullet_dir):
 	var bullet = bullet_scene.instantiate()
 	
-	bullet.setup(bullet_pos)
+	bullet.setup(bullet_pos, bullet_dir)
 	
 	add_child(bullet)
+	

@@ -18,8 +18,12 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 	
 	if(Input.is_action_just_pressed("shoot")):
-		var bullet_pos = $barrel.global_position
-		var bullet_dir = $barrel.global_position - $barrle_base.global_position
+		var bullet_pos = $barrel_1.global_position
+		var bullet_dir = $barrel_1.global_position - $barrel_base_1.global_position
+		shoot.emit(bullet_pos, bullet_dir)
+		
+		bullet_pos = $barrel_2.global_position
+		bullet_dir = $barrel_2.global_position - $barrel_base_2.global_position
 		shoot.emit(bullet_pos, bullet_dir)
 
 	move_and_slide()
