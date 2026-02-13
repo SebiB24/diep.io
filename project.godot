@@ -14,7 +14,7 @@ config/name="Diep.io"
 config/tags=PackedStringArray("2d", "demo")
 run/main_scene="uid://biq0h7r112bd3"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="uid://cg3y5d2s1q3o0"
+config/icon="uid://drq33t0lj1oci"
 
 [input]
 

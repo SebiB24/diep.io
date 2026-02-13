@@ -1,0 +1,4 @@
+TODO:
+	1. add slow deceleration before you stop moving
+	2. add gun recoil ( shooting pushes you back )
+	3. add bullet desplawn distance
