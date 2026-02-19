@@ -1,4 +1,5 @@
 TODO:
-	1. add slow deceleration before you stop moving
-	2. add gun recoil ( shooting pushes you back )
-	3. add bullet desplawn distance
+	1. make tank movement feel better
+	2. add enemies 
+	3. shoot cooldown
+	4. sound

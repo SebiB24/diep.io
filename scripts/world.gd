@@ -1,10 +1,16 @@
 extends Node2D
 
-@onready var tank = $tank
+@export var tank: PackedScene = preload("res://scenes/tank.tscn")
 @export var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")
 
+var tank_instance: Tank
+
 func _ready() -> void:
-	tank.shoot.connect(_on_tank_shoot)
+	tank.instantiate().position = Vector2(400, 300)
+	tank_instance = tank.instantiate()
+	add_child(tank_instance)
+
+	tank_instance.shoot.connect(_on_tank_shoot)
 
 func _process(delta: float) -> void:
 	pass
