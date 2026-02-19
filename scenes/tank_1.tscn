@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxmnqixq8s327"]
 
-[ext_resource type="Script" uid="uid://1vw0tki7nwo1" path="res://scripts/tank.gd" id="1_c4xvs"]
-[ext_resource type="Texture2D" uid="uid://drq33t0lj1oci" path="res://resources/diep-tank.png" id="1_qrxud"]
-[ext_resource type="Script" uid="uid://dba8rlqevqceo" path="res://scripts/InputHandler.gd" id="3_01nm4"]
+[ext_resource type="Script" uid="uid://cqq3fukqv5ywh" path="res://scripts/tank1.gd" id="1_u2pf5"]
+[ext_resource type="Texture2D" uid="uid://drq33t0lj1oci" path="res://resources/diep-tank.png" id="2_rdc6h"]
+[ext_resource type="Script" uid="uid://dba8rlqevqceo" path="res://scripts/InputHandler.gd" id="3_66phl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c4xvs"]
 
-[node name="tank" type="CharacterBody2D"]
+[node name="tank_1" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(2, 2)
-script = ExtResource("1_c4xvs")
+script = ExtResource("1_u2pf5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.88, 0)
@@ -20,7 +20,7 @@ shape = SubResource("CircleShape2D_c4xvs")
 texture_filter = 4
 position = Vector2(4.5, 0)
 scale = Vector2(0.245, 0.245)
-texture = ExtResource("1_qrxud")
+texture = ExtResource("2_rdc6h")
 
 [node name="barrel" type="Marker2D" parent="."]
 position = Vector2(18, 0)
@@ -32,4 +32,8 @@ zoom = Vector2(1.3, 1.3)
 position = Vector2(10, 0)
 
 [node name="InputHandler" type="Node" parent="."]
-script = ExtResource("3_01nm4")
+script = ExtResource("3_66phl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

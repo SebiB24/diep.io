@@ -1,3 +1,5 @@
+# base tank class, all tanks will inherit from this class (should not be instanciated directly)
+
 class_name Tank extends CharacterBody2D
 
 @onready var input_handler = $InputHandler
@@ -34,8 +36,6 @@ func _physics_process(delta: float) -> void:
 func on_change_direction(dir: Vector2) -> void:
 	direction = dir.normalized()
 
+# this function should be implemented by the child class
 func on_shoot():
-	var bullet_pos = $barrel.global_position
-	var bullet_dir = $barrel.global_position - $barrle_base.global_position
-	force = bullet_dir.normalized() * -8.0
-	shoot.emit(bullet_pos, bullet_dir)
+	pass

@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var tank: PackedScene = preload("res://scenes/tank.tscn")
+@export var tank: PackedScene = preload("res://scenes/tank_1.tscn")
 @export var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")
 
 var tank_instance: Tank

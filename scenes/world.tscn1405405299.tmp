@@ -1040,6 +1040,7 @@ size = Vector2(4264, 505)
 [node name="world" type="Node2D"]
 script = ExtResource("1_rwgxs")
 tank = ExtResource("2_4wyf3")
+bullet_scene = null
 
 [node name="background" type="TileMapLayer" parent="."]
 z_index = -1

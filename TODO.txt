@@ -1,5 +1,5 @@
 TODO:
 	1. make tank movement feel better
 	2. add enemies 
-	3. shoot cooldown
-	4. sound
+	3. shoot cooldown +
+	4. sound 
