@@ -1,5 +1,6 @@
 TODO:
-	1. make tank movement feel better
+	1. fix tank movemnet ! +
 	2. add enemies 
 	3. shoot cooldown +
-	4. sound 
+	4. sound +
+	5. fix duplicate nodes on tank scenes !

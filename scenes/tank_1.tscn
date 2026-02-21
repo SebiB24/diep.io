@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxmnqixq8s327"]
+[gd_scene load_steps=6 format=3 uid="uid://cxmnqixq8s327"]
 
 [ext_resource type="Script" uid="uid://cqq3fukqv5ywh" path="res://scripts/tank1.gd" id="1_u2pf5"]
 [ext_resource type="Texture2D" uid="uid://drq33t0lj1oci" path="res://resources/diep-tank.png" id="2_rdc6h"]
 [ext_resource type="Script" uid="uid://dba8rlqevqceo" path="res://scripts/InputHandler.gd" id="3_66phl"]
+[ext_resource type="AudioStream" uid="uid://3qeprnvceny0" path="res://resources/pop_sound.wav" id="4_rdc6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c4xvs"]
 
@@ -37,3 +38,6 @@ script = ExtResource("3_66phl")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_rdc6h")

@@ -7,7 +7,7 @@ class_name Tank extends CharacterBody2D
 signal shoot(bullet_pos: Vector2, bullet_dir)
 
 @export var speed = 200.0
-@export var friction = 3.0
+@export var weight = 0.1
 var direction = Vector2.ZERO
 var force = Vector2.ZERO
 
@@ -23,14 +23,19 @@ func _physics_process(delta: float) -> void:
 	var target_velocity = Vector2.ZERO
 	if direction != Vector2.ZERO:
 		target_velocity = direction * speed
+	
+	# if the tank is not beeing moved by the player, apply the force from shooting
+	target_velocity += force 
 
-	velocity = velocity.move_toward(target_velocity, friction * 100 * delta)
+	# lerp is linear interpolation, it will smoothly transition the velocity towards the target_velocity based on the weight and delta time
+	velocity = velocity.lerp(target_velocity, weight * 20 * delta)
+	force = force.lerp(Vector2.ZERO, weight * 20 * delta)
 
-	# if i try to apply force on target_velocity, it will not work because the target_velocity is being calculated every frame !
-	velocity += force 
-	force = force.move_toward(Vector2.ZERO, friction/15)
-
-	velocity = velocity.limit_length(speed)
+	if velocity.length() < 0.1:
+		velocity = Vector2.ZERO
+	if force.length() < 0.1:
+		force = Vector2.ZERO
+	
 	move_and_slide()
 
 func on_change_direction(dir: Vector2) -> void:
