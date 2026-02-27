@@ -1,16 +1,15 @@
 class_name Tank2 extends Tank
 
 func on_shoot():
-	if $Timer.is_stopped():
-		var bullet_pos = $barrel_1.global_position
-		var bullet_dir = $barrel_1.global_position - $barrel_base_1.global_position
+	if shoot_timer.is_stopped():
+		var bullet_pos = $Barrels.get_child(0).global_position
+		var bullet_dir = $Barrels.get_child(0).global_position - $Barrels.get_child(2).global_position
 		shoot.emit(bullet_pos, bullet_dir)
-		$Sound.play()
-		bullet_pos = $barrel_2.global_position
-		bullet_dir = $barrel_2.global_position - $barrel_base_2.global_position
+		sound_shoot.play()
+		bullet_pos = $Barrels.get_child(1).global_position
+		bullet_dir = $Barrels.get_child(1).global_position - $Barrels.get_child(3).global_position
 		shoot.emit(bullet_pos, bullet_dir)
-		$Sound.play()
-		$Timer.start()
-		
+		shoot_timer.start()
+
 
 	

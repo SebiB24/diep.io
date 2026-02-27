@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b4spgdgofmg4b" path="res://scripts/world.gd" id="1_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://dtlte0as53pv3" path="res://resources/map.png" id="3_4wyf3"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0juu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wyf3"]
 texture = ExtResource("3_4wyf3")
 0:0/0 = 0
 1:0/0 = 0
@@ -1031,7 +1031,7 @@ texture = ExtResource("3_4wyf3")
 31:31/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_71j4m"]
-sources/1 = SubResource("TileSetAtlasSource_k0juu")
+sources/1 = SubResource("TileSetAtlasSource_4wyf3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wyf3"]
 size = Vector2(4264, 505)

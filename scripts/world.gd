@@ -11,9 +11,8 @@ func _ready() -> void:
 	add_child(tank_instance)
 
 	tank_instance.shoot.connect(_on_tank_shoot)
-
-func _process(delta: float) -> void:
-	pass
+	if self.name == "world":
+		tank_instance.remove_light()
 	
 func _on_tank_shoot(bullet_pos, bullet_dir):
 	var bullet = bullet_scene.instantiate()

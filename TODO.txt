@@ -1,6 +1,18 @@
 TODO:
+
+GENERAL:
+
+	0. !! IMPLEMENT SCENE INHERITANCE !!
+
 	1. fix tank movemnet ! +
 	2. add enemies 
 	3. shoot cooldown +
 	4. sound +
-	5. fix duplicate nodes on tank scenes !
+	5. fix duplicate nodes on tank scenes ! +
+
+
+WORLD_LIGHT
+	1. make light fix + 
+	2. add turn off light button +
+	3. add light ocluders + 
+	4 fix fine positioning of nodes in tank scene ! +

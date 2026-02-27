@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://h5opdvqpkvb1"]
+[gd_scene load_steps=5 format=3 uid="uid://h5opdvqpkvb1"]
 
 [ext_resource type="Script" uid="uid://k7sq3vhqtnie" path="res://scripts/tank2.gd" id="1_0yj8r"]
 [ext_resource type="Texture2D" uid="uid://cpphy3sfyvfi6" path="res://resources/diep-tank3.png" id="1_am3wt"]
 [ext_resource type="Script" uid="uid://dba8rlqevqceo" path="res://scripts/InputHandler.gd" id="3_ma17k"]
-[ext_resource type="AudioStream" uid="uid://3qeprnvceny0" path="res://resources/pop_sound.wav" id="4_sahko"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0yj8r"]
 
@@ -22,27 +21,19 @@ position = Vector2(-2.12, -0.74)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("1_am3wt")
 
-[node name="barrel_1" type="Marker2D" parent="."]
-position = Vector2(25, 0)
-
-[node name="barrel_2" type="Marker2D" parent="."]
-position = Vector2(-25, 0)
-
-[node name="barrel_base_1" type="Marker2D" parent="."]
-position = Vector2(13, 0)
-
-[node name="barrel_base_2" type="Marker2D" parent="."]
-position = Vector2(-13, 0)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.3, 1.3)
-
 [node name="InputHandler" type="Node" parent="."]
 script = ExtResource("3_ma17k")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
+[node name="Barrels" type="Node2D" parent="."]
 
-[node name="Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_sahko")
+[node name="barrel_1" type="Marker2D" parent="Barrels"]
+position = Vector2(25, 0)
+
+[node name="barrel_2" type="Marker2D" parent="Barrels"]
+position = Vector2(-25, 0)
+
+[node name="barrel_base_1" type="Marker2D" parent="Barrels"]
+position = Vector2(13, 0)
+
+[node name="barrel_base_2" type="Marker2D" parent="Barrels"]
+position = Vector2(-13, 0)
