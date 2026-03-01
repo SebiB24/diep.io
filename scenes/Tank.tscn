@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8o4tlqkml763"]
+
+[ext_resource type="Script" uid="uid://1vw0tki7nwo1" path="res://scripts/tank.gd" id="1_tinmt"]
+[ext_resource type="Script" uid="uid://dba8rlqevqceo" path="res://scripts/InputHandler.gd" id="2_0l78g"]
+[ext_resource type="Texture2D" uid="uid://r0bqkrdc0opl" path="res://resources/light.png" id="3_q0k83"]
+[ext_resource type="AudioStream" uid="uid://3qeprnvceny0" path="res://resources/pop_sound.wav" id="4_afltc"]
+[ext_resource type="AudioStream" uid="uid://djsmrh0hvhftw" path="res://resources/flashlight.wav" id="5_ike63"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4xvs"]
+
+[node name="Tank" type="CharacterBody2D"]
+z_index = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_tinmt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.05, 1.05)
+shape = SubResource("CircleShape2D_c4xvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 4
+position = Vector2(4.755, 0)
+scale = Vector2(0.245, 0.245)
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("2_0l78g")
+
+[node name="Barrels" type="Node2D" parent="."]
+
+[node name="Flashlight" type="PointLight2D" parent="."]
+energy = 0.65
+shadow_enabled = true
+texture = ExtResource("3_q0k83")
+texture_scale = 0.35
+
+[node name="SoundShoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_afltc")
+
+[node name="SoundFlashlight" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ike63")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.3, 1.3)
+
+[node name="TimerShoot" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

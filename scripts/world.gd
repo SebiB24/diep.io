@@ -11,7 +11,7 @@ func _ready() -> void:
 	add_child(tank_instance)
 
 	tank_instance.shoot.connect(_on_tank_shoot)
-	if self.name == "world":
+	if self.name == "World":
 		tank_instance.remove_light()
 	
 func _on_tank_shoot(bullet_pos, bullet_dir):

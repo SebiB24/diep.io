@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtlte0as53pv3" path="res://resources/map.png" id="1_7n7w2"]
 [ext_resource type="Script" uid="uid://b4spgdgofmg4b" path="res://scripts/world.gd" id="1_uuu7a"]
-[ext_resource type="PackedScene" uid="uid://dpurxuxsflmdw" path="res://scenes/Tank_1.tscn" id="2_j37kq"]
+[ext_resource type="PackedScene" uid="uid://dpurxuxsflmdw" path="res://scenes/tank_3.tscn" id="2_ctwc0"]
 [ext_resource type="Texture2D" uid="uid://e5gy1psyyilp" path="res://resources/caster .png" id="3_678pp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uuu7a"]
@@ -1041,9 +1041,9 @@ size = Vector2(4264, 505)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uuu7a"]
 polygon = PackedVector2Array(60.8525, -146, 92.8525, -146, 92.8525, -178, 60.8525, -178)
 
-[node name="World_light" type="Node2D"]
+[node name="world_light" type="Node2D"]
 script = ExtResource("1_uuu7a")
-tank = ExtResource("2_j37kq")
+tank = ExtResource("2_ctwc0")
 
 [node name="background" type="TileMapLayer" parent="."]
 z_index = -1
